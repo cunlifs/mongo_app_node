@@ -8,7 +8,8 @@ const http = require('http');
 // Collect database settings from environment variables
 const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
-const mongoDatabase = "admin";
+const mongoAdminDatabase = "admin";
+const mongoDatabase = "airbnb";
 const mongoCollection = "chicago_listings";
 const mongoUser = "root";
 const mongoPassword = "abc123";
@@ -16,7 +17,7 @@ const mongoPassword = "abc123";
 // Build MongoDB connection string
 //================================
 // Used for OpenShift environment
-var url = "mongodb://" + mongoUser + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" + mongoDatabase
+var url = "mongodb://" + mongoUser + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" + mongoAdminDatabase
 // Used for local testing
 // var url = "mongodb://localhost:27017/airbnb"
 console.log("MongoDB instance is at: " + url)
