@@ -5,15 +5,28 @@ const os = require("os");
 const { MongoClient } = require('mongodb');
 const http = require('http');
 
+//const mongoHost = process.env.database_host;
+//const mongoPort = process.env.database_port;
+//const mongoDatabase = process.env.database_name;
+//const mongoUser = process.env.database_user;
+//const mongoPassword = process.env.database_password;
+
 // Collect database settings from environment variables
 const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
+const mongoDatabase = process.env.mongo_db_name;
 const mongoAdminDatabase = "admin";
-const mongoDatabase = "airbnb";
-const mongoCollection = "chicago_listings";
-const mongoUser = "root";
-const mongoPassword = "abc123";
+const mongoCollection = process.env.mongo_db_collection_name;
+const mongoUser = process.env.MONGO_INITDB_ROOT_USERNAME;
+const mongoPassword = process.env.MONGO_INITDB_ROOT_PASSWORD;
 
+//const mongoHost = "mongodb-arm64";
+//const mongoPort = "27017";
+//const mongoAdminDatabase = "admin";
+//const mongoDatabase = "airbnb";
+//const mongoCollection = "chicago_listings";
+//const mongoUser = "root";
+//const mongoPassword = "abc123";
 // Build MongoDB connection string
 //================================
 // Used for OpenShift environment
