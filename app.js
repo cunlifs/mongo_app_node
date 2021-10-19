@@ -82,32 +82,30 @@ app.listen(port, hostname, () => {
     console.log(`MongoDB app listening at http://${hostname}:${port}`)
 })
 
-async function listDatabases(client){
-    databasesList = await client.db().admin().listDatabases();
+//async function listDatabases(client){
+//    databasesList = await client.db().admin().listDatabases();
  
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-}
+//    console.log("Databases:");
+//    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+//}
 
-async function main(){
-    const uri = "mongodb+srv://root:abc123@172.30.134.34/airbnb?retryWrites=true&w=majority";
+//async function main(){
+//    const uri = "mongodb+srv://root:abc123@172.30.134.34/airbnb?retryWrites=true&w=majority";
     
-    const client = new MongoClient(uri);
+//    const client = new MongoClient(uri);
  
-    try {
+//    try {
         // Connect to the MongoDB cluster
-        await client.connect();
+//        await client.connect();
  
         // Make the appropriate DB calls
-        await  listDatabases(client);
+//        await  listDatabases(client);
  
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
+//    } catch (e) {
+//        console.error(e);
+//    } finally {
+//        await client.close();
+//    }
+//}
 
-main().catch(console.error);
-
-
+//main().catch(console.error);
