@@ -87,7 +87,7 @@ async function listDatabases(client){
  
     console.log("Databases:");
     databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
+}
 
 async function main(){
     const uri = "mongodb+srv://root:abc123@172.30.134.34/airbnb?retryWrites=true&w=majority";
@@ -109,5 +109,5 @@ async function main(){
 }
 
 main().catch(console.error);
-}
+
 
