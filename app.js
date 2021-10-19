@@ -14,9 +14,9 @@ const http = require('http');
 // Collect database settings from environment variables
 const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
-const mongoDatabase = process.env.mongo_db_name;
+const mongoDatabase = process.env.MONGO_DB_NAME;
 const mongoAdminDatabase = "admin";
-const mongoCollection = process.env.mongo_db_collection_name;
+const mongoCollection = process.env.MONGO_DB_COLLECTION_NAME;
 const mongoUser = process.env.MONGO_INITDB_ROOT_USERNAME;
 const mongoPassword = process.env.MONGO_INITDB_ROOT_PASSWORD;
 
