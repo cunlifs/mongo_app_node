@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 const http = require('http');
 
 // Collect database settings from environment variables
-const mongoHost = "172.30.134.34";
+const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
 const mongoDatabase = "airbnb";
 const mongoCollection = "chicago_listings";
