@@ -8,7 +8,7 @@ const http = require('http');
 // Collect database settings from environment variables
 const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
-const mongoDatabase = "airbnb";
+const mongoDatabase = "admin";
 const mongoCollection = "chicago_listings";
 const mongoUser = "root";
 const mongoPassword = "abc123";
