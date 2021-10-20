@@ -16,8 +16,7 @@ const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
 const mongoDatabase = process.env.MONGO_DB_NAME;
 const mongoAdminDatabase = "admin";
-//const mongoCollection = process.env.MONGO_DB_COLLECTION_NAME;
-const mongoCollection = "chicago_listings";
+const mongoCollection = process.env.MONGO_COLLECTION_NAME;
 const mongoUser = process.env.MONGO_INITDB_ROOT_USERNAME;
 const mongoPassword = process.env.MONGO_INITDB_ROOT_PASSWORD;
 
@@ -64,14 +63,15 @@ app.get('/findall', (req, res) => {
         var result = ""
         try {
             await client.connect();
-            console.log("connected");
+            console.log("Connected to DB:");
             console.log(mongoDatabase);
             const collection = client.db(mongoDatabase).collection(mongoCollection);
-            console.log("collection set");
+            console.log("Using collection:");
+            console.log(mongoCollection);
             findQuery = destringify(findQuery);
-            console.log("query is: " + JSON.stringify(findQuery));
+            console.log("Query is: " + JSON.stringify(findQuery));
             result = await collection.find(findQuery).toArray();
-            console.log("search completed");
+            console.log("Search completed");
         } finally {
             await client.close();
             console.log("client closed");
