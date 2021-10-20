@@ -16,7 +16,8 @@ const mongoHost = "mongodb-arm64";
 const mongoPort = "27017";
 const mongoDatabase = process.env.MONGO_DB_NAME;
 const mongoAdminDatabase = "admin";
-const mongoCollection = process.env.MONGO_DB_COLLECTION_NAME;
+//const mongoCollection = process.env.MONGO_DB_COLLECTION_NAME;
+const mongoCollection = "chicago_listings";
 const mongoUser = process.env.MONGO_INITDB_ROOT_USERNAME;
 const mongoPassword = process.env.MONGO_INITDB_ROOT_PASSWORD;
 
