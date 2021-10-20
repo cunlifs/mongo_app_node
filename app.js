@@ -65,6 +65,7 @@ app.get('/findall', (req, res) => {
         try {
             await client.connect();
             console.log("connected");
+            console.log(mongoDatabase);
             const collection = client.db(mongoDatabase).collection(mongoCollection);
             console.log("collection set");
             findQuery = destringify(findQuery);
