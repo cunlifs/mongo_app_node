@@ -12,7 +12,7 @@ const http = require('http');
 //const mongoPassword = process.env.database_password;
 
 // Collect database settings from environment variables
-const mongoHost = "mongodb-arm64";
+const mongoHost = "arm-64-mongodb";
 const mongoPort = "27017";
 const mongoDatabase = process.env.MONGO_DB_NAME;
 const mongoAdminDatabase = "admin";
